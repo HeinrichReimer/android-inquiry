@@ -32,6 +32,8 @@ public final class Inquiry {
                    @Nullable String databaseName,
                    @IntRange(from = 1, to = Integer.MAX_VALUE) int databaseVersion) {
 
+        Preconditions.checkNotNull(context);
+
         try {
             // try to create the handler inside the calling thread. If this thread does not have a
             // default looper, e.g. JobService(s)...
@@ -50,6 +52,7 @@ public final class Inquiry {
     @NonNull
     public static Inquiry init(@NonNull Context context, @Nullable String databaseName,
                                @IntRange(from = 1, to = Integer.MAX_VALUE) int databaseVersion) {
+        Preconditions.checkNotNull(context);
         if (inquiry != null) {
             throw new IllegalStateException("Inquiry already initialized, call Inquiry.deinit() first");
         }
@@ -96,6 +99,7 @@ public final class Inquiry {
     }
 
     public void dropTable(@NonNull Class<?> type) {
+        Preconditions.checkNotNull(type);
         if (!DatabaseSchemaParser.isTable(type))
             throw new UnsupportedOperationException("Unable to drop table for type " + type.getSimpleName());
 
@@ -107,31 +111,37 @@ public final class Inquiry {
 
     @NonNull
     public <RowType> Query<RowType, Long[]> select(@NonNull Class<RowType> rowType) {
+        Preconditions.checkNotNull(rowType);
         return new Query<>(this, Query.SELECT, rowType);
     }
 
     @NonNull
     public <RowType> Query<RowType, Long[]> insert(@NonNull Class<RowType> rowType) {
+        Preconditions.checkNotNull(rowType);
         return new Query<>(this, Query.INSERT, rowType);
     }
 
     @NonNull
     public <RowType> Query<RowType, Long[]> insertOrIgnore(@NonNull Class<RowType> rowType) {
+        Preconditions.checkNotNull(rowType);
         return new Query<>(this, Query.INSERT_OR_IGNORE, rowType);
     }
 
     @NonNull
     public <RowType> Query<RowType, Long[]> replace(@NonNull Class<RowType> rowType) {
+        Preconditions.checkNotNull(rowType);
         return new Query<>(this, Query.REPLACE, rowType);
     }
 
     @NonNull
     public <RowType> Query<RowType, Integer> update(@NonNull Class<RowType> rowType) {
+        Preconditions.checkNotNull(rowType);
         return new Query<>(this, Query.UPDATE, rowType);
     }
 
     @NonNull
     public <RowType> Query<RowType, Integer> delete(@NonNull Class<RowType> rowType) {
+        Preconditions.checkNotNull(rowType);
         return new Query<>(this, Query.DELETE, rowType);
     }
 }

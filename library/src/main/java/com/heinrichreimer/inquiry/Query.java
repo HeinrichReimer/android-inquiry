@@ -111,6 +111,8 @@ public final class Query<RowType, RunReturn> implements UpgradeCallback {
     }
 
     public Query<RowType, RunReturn> where(@NonNull String selection, @Nullable Object... selectionArgs) {
+        Preconditions.checkNotNull(selection);
+
         int args = Utils.countOccurrences(selection, '?');
         if ((selectionArgs == null && args != 0) ||
                 (selectionArgs != null && selectionArgs.length != args))
@@ -124,6 +126,8 @@ public final class Query<RowType, RunReturn> implements UpgradeCallback {
     }
 
     public Query<RowType, RunReturn> whereIn(@NonNull String column, @Nullable Object... selectionArgs) {
+        Preconditions.checkNotNull(column);
+
         if (selectionArgs == null)
             return this;
 
@@ -182,6 +186,7 @@ public final class Query<RowType, RunReturn> implements UpgradeCallback {
 
     @SuppressWarnings("unchecked")
     public final Query<RowType, RunReturn> value(@NonNull Object value) {
+        Preconditions.checkNotNull(value);
         values = (RowType[]) Array.newInstance(rowType, 1);
         Array.set(values, 0, value);
         return this;
@@ -210,6 +215,8 @@ public final class Query<RowType, RunReturn> implements UpgradeCallback {
     }
 
     public void one(@NonNull final RunCallback<RowType> callback) {
+        Preconditions.checkNotNull(callback);
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -231,6 +238,8 @@ public final class Query<RowType, RunReturn> implements UpgradeCallback {
     }
 
     public void all(@NonNull final RunCallback<RowType[]> callback) {
+        Preconditions.checkNotNull(callback);
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -312,6 +321,8 @@ public final class Query<RowType, RunReturn> implements UpgradeCallback {
     }
 
     public void run(@NonNull final RunCallback<RunReturn> callback) {
+        Preconditions.checkNotNull(callback);
+
         new Thread(new Runnable() {
             @Override
             public void run() {
