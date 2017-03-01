@@ -4,6 +4,8 @@
 [![Build Status](https://travis-ci.org/HeinrichReimer/android-inquiry.svg?branch=master)](https://travis-ci.org/HeinrichReimer/android-inquiry)
 [![Apache License 2.0](https://img.shields.io/github/license/HeinrichReimer/material-intro.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+**DEPRECATED:** This library won't be continued as most of the features are now part of the original library.
+
 *This is a forked and improved version of [Aidan Follestad's](https://github.com/afollestad) awesome library [Inquiry](https://github.com/afollestad/inquiry).  
 Credit goes to him for the idea of annotation based automatic SQLite database modification :sweat_smile:.*
 
