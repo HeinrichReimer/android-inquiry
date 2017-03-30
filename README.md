@@ -1,8 +1,8 @@
 # android-inquiry
 
 [![jitpack.io](https://www.jitpack.io/v/com.heinrichreimersoftware/inquiry.svg)](https://www.jitpack.io/#com.heinrichreimersoftware/inquiry)
-[![Build Status](https://travis-ci.org/HeinrichReimer/android-inquiry.svg?branch=master)](https://travis-ci.org/HeinrichReimer/android-inquiry)
-[![Apache License 2.0](https://img.shields.io/github/license/HeinrichReimer/material-intro.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Build Status](https://travis-ci.org/heinrichreimer/android-inquiry.svg?branch=master)](https://travis-ci.org/heinrichreimer/android-inquiry)
+[![Apache License 2.0](https://img.shields.io/github/license/heinrichreimer/material-intro.svg)](https://github.com/heinrichreimer/android-inquiry/blob/master/LICENSE.md)
 
 **DEPRECATED:** This library won't be continued as most of the features are now part of the original library.
 
@@ -37,25 +37,25 @@ dependencies {
 
 ## Table of Contents
 
-1. [Dependency](https://github.com/HeinrichReimer/inquiry#dependency)
-*  [Quick Setup](https://github.com/HeinrichReimer/inquiry#quick-setup)
-*  [Example Row](https://github.com/HeinrichReimer/inquiry#example-row)
-*  [References](https://github.com/HeinrichReimer/inquiry#references)
-*  [Converters](https://github.com/HeinrichReimer/inquiry#converters)
-*  [Querying Rows](https://github.com/HeinrichReimer/inquiry#querying-rows)
-    1. [Basics](https://github.com/HeinrichReimer/inquiry#basics)
-    *  [Where](https://github.com/HeinrichReimer/inquiry#where)
-    *  [Sorting and Limiting](https://github.com/HeinrichReimer/inquiry#sorting-and-limiting)
-*  [Inserting Rows](https://github.com/HeinrichReimer/inquiry#inserting-rows)
-*  [Updating Rows](https://github.com/HeinrichReimer/inquiry#updating-rows)
-    1. [Basics](https://github.com/HeinrichReimer/inquiry#basics-1)
-    *  [Updating Specific Columns](https://github.com/HeinrichReimer/inquiry#updating-specific-columns)
-*  [Deleting Rows](https://github.com/HeinrichReimer/inquiry#deleting-rows)
-*  [Dropping Tables](https://github.com/HeinrichReimer/inquiry#dropping-tables)
-*  [Accessing Content Providers](https://github.com/HeinrichReimer/inquiry#accessing-content-providers)
-*  [Changelog](https://github.com/HeinrichReimer/inquiry#changelog)
-*  [Open source libraries](https://github.com/HeinrichReimer/inquiry#open-source-libraries)
-*  [License](https://github.com/HeinrichReimer/inquiry#license)
+1. [Dependency](#dependency)
+1.  [Quick Setup](#quick-setup)
+1.  [Example Row](#example-row)
+1.  [References](#references)
+1.  [Converters](#converters)
+1.  [Querying Rows](#querying-rows)
+    1. [Basics](#basics)
+    1.  [Where](#where)
+    1.  [Sorting and Limiting](#sorting-and-limiting)
+1.  [Inserting Rows](#inserting-rows)
+1.  [Updating Rows](#updating-rows)
+    1. [Basics](#basics-1)
+    1.  [Updating Specific Columns](#updating-specific-columns)
+1.  [Deleting Rows](#deleting-rows)
+1.  [Dropping Tables](#dropping-tables)
+1.  [Accessing Content Providers](#accessing-content-providers)
+1.  [Changelog](#changelog)
+1.  [Open source libraries](#open-source-libraries)
+1.  [License](#license)
 
 ## Quick setup
 
@@ -414,7 +414,7 @@ If you need to access content providers, I highly recommend you to check out the
 
 ## Changelog
 
-See the [releases section](https://github.com/HeinrichReimer/inquiry/releases) for a detailed changelog.
+See the [releases section](https://github.com/heinrichreimer/inquiry/releases) for a detailed changelog.
 
 Open source libraries
 -------
